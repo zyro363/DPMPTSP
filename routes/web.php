@@ -7,6 +7,14 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\AccountController;
+use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\PegawaiController;
+use App\Http\Controllers\Admin\InformasiController;
+use App\Http\Controllers\Admin\VisiMisiController;
+use App\Http\Controllers\Admin\StrukturOrganisasiController;
+use App\Http\Controllers\Admin\JamOperasionalController;
+use App\Http\Controllers\Admin\LayananController;
+use App\Http\Controllers\Admin\InovasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +80,116 @@ Route::prefix('admin/account')
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
         Route::get('/reset/{id}', 'reset')->name('reset'); // Hanya untuk Account
+    });
+
+// Banner
+Route::prefix('admin/banner')
+    ->name('admin.banner.')
+    ->middleware('cekLevel:1 2')
+    ->controller(BannerController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Pegawai
+Route::prefix('admin/pegawai')
+    ->name('admin.pegawai.')
+    ->middleware('cekLevel:1 2')
+    ->controller(PegawaiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Informasi
+Route::prefix('admin/informasi')
+    ->name('admin.informasi.')
+    ->middleware('cekLevel:1 2')
+    ->controller(InformasiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Visi Misi
+Route::prefix('admin/visi_misi')
+    ->name('admin.visi_misi.')
+    ->middleware('cekLevel:1 2')
+    ->controller(VisiMisiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Struktur Organisasi
+Route::prefix('admin/struktur')
+    ->name('admin.struktur.')
+    ->middleware('cekLevel:1 2')
+    ->controller(StrukturOrganisasiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Jam Operasional
+Route::prefix('admin/jam_operasional')
+    ->name('admin.jam_operasional.')
+    ->middleware('cekLevel:1 2')
+    ->controller(JamOperasionalController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Layanan
+Route::prefix('admin/layanan')
+    ->name('admin.layanan.')
+    ->middleware('cekLevel:1 2')
+    ->controller(LayananController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Inovasi
+Route::prefix('admin/inovasi')
+    ->name('admin.inovasi.')
+    ->middleware('cekLevel:1 2')
+    ->controller(InovasiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
     });

@@ -359,7 +359,7 @@
 			</div>
 			<div class="menu-block customscroll">
 				<div class="sidebar-menu">
-					<ul id="accordion-menu">
+					<ul id="accordion-menu">  
 						<li>
 							<a href="/admin/home" class="dropdown-toggle no-arrow @if ($activePage == 'dashboard') active @endif">
 								<span class="micon bi bi-house"></span><span class="mtext">Dashboard</span>
@@ -367,17 +367,17 @@
 						</li>
 						<li>
 							<a href="/admin/kategori" class="dropdown-toggle no-arrow @if ($activePage == 'kategori') active @endif">
-								<span class="micon dw dw-book"></span><span class="mtext">Data Kategori</span>
+								<span class="micon bi-tags"></span><span class="mtext">Data Kategori</span>
 							</a>
 						</li>
 						<li>
 							<a href="/admin/banner" class="dropdown-toggle no-arrow @if ($activePage == 'banner') active @endif">
-								<span class="micon dw dw-book"></span><span class="mtext">Data Banner</span>
+								<span class="micon bi-image"></span><span class="mtext">Data Banner</span>
 							</a>
 						</li>
                         <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon dw dw-user1"></span><span class="mtext">Data Account</span>
+								<span class="micon bi-people"></span><span class="mtext">Data Account</span>
 							</a>
 							<ul class="submenu">
 								<li><a href="/admin/account" class="@if ($activePage == 'account') active @endif">Data Administrator</a></li>
@@ -386,7 +386,7 @@
 						</li>
 						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon dw dw-notepad-2"></span><span class="mtext">Tentang</span>
+								<span class="micon bi-info-circle"></span><span class="mtext">Tentang</span>
 							</a>
 							<ul class="submenu">
 								<li><a href="/admin/informasi" class="@if ($activePage == 'informasi') active @endif">Informasi</a></li>
@@ -397,12 +397,12 @@
 						</li>
 						<li>
 							<a href="/admin/layanan" class="dropdown-toggle no-arrow @if ($activePage == 'layanan') active @endif">
-								<span class="micon dw dw-book"></span><span class="mtext">Data Layanan Perizinan</span>
+								<span class="micon bi-clipboard-check"></span><span class="mtext">Data Layanan Perizinan</span>
 							</a>
 						</li>
 						<li>
 							<a href="/admin/layanan" class="dropdown-toggle no-arrow @if ($activePage == 'layanan') active @endif">
-								<span class="micon dw dw-book"></span><span class="mtext">Data Inovasi</span>
+								<span class="micon bi-lightbulb"></span><span class="mtext">Data Inovasi</span>
 							</a>
 						</li>
 					</ul>
