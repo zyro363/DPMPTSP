@@ -370,6 +370,11 @@
 								<span class="micon dw dw-book"></span><span class="mtext">Data Kategori</span>
 							</a>
 						</li>
+						<li>
+							<a href="/admin/banner" class="dropdown-toggle no-arrow @if ($activePage == 'banner') active @endif">
+								<span class="micon dw dw-book"></span><span class="mtext">Data Banner</span>
+							</a>
+						</li>
                         <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
 								<span class="micon dw dw-user1"></span><span class="mtext">Data Account</span>
