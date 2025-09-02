@@ -376,7 +376,29 @@
 							</a>
 							<ul class="submenu">
 								<li><a href="/admin/account" class="@if ($activePage == 'account') active @endif">Data Administrator</a></li>
+								<li><a href="/admin/pegawai" class="@if ($activePage == 'pegawai') active @endif">Data Pegawai</a></li>
 							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon dw dw-notepad-2"></span><span class="mtext">Tentang</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="/admin/informasi" class="@if ($activePage == 'informasi') active @endif">Informasi</a></li>
+								<li><a href="/admin/visi_misi" class="@if ($activePage == 'visi_misi') active @endif">Visi Misi</a></li>
+								<li><a href="/admin/struktur" class="@if ($activePage == 'struktur') active @endif">Struktur Organisasi</a></li>
+								<li><a href="/admin/jam_operasional" class="@if ($activePage == 'jam_operasional') active @endif">Jam Operasional</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="/admin/layanan" class="dropdown-toggle no-arrow @if ($activePage == 'layanan') active @endif">
+								<span class="micon dw dw-book"></span><span class="mtext">Data Layanan Perizinan</span>
+							</a>
+						</li>
+						<li>
+							<a href="/admin/layanan" class="dropdown-toggle no-arrow @if ($activePage == 'layanan') active @endif">
+								<span class="micon dw dw-book"></span><span class="mtext">Data Inovasi</span>
+							</a>
 						</li>
 					</ul>
 				</div>
