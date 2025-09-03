@@ -401,7 +401,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/admin/layanan" class="dropdown-toggle no-arrow @if ($activePage == 'layanan') active @endif">
+							<a href="/admin/inovasi" class="dropdown-toggle no-arrow @if ($activePage == 'inovasi') active @endif">
 								<span class="micon bi-lightbulb"></span><span class="mtext">Data Inovasi</span>
 							</a>
 						</li>
