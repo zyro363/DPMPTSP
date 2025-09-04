@@ -72,6 +72,15 @@ class JamOperasionalController extends Controller
         return view('admin.jam_operasional.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('jam_operasional')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/jam_operasional')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.jam_operasional.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         try {

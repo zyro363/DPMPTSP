@@ -91,6 +91,7 @@ Route::prefix('admin/banner')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -105,6 +106,7 @@ Route::prefix('admin/pegawai')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -119,6 +121,7 @@ Route::prefix('admin/informasi')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -133,6 +136,7 @@ Route::prefix('admin/visi_misi')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -147,6 +151,7 @@ Route::prefix('admin/struktur')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -161,6 +166,7 @@ Route::prefix('admin/jam_operasional')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -175,6 +181,7 @@ Route::prefix('admin/layanan')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');
@@ -189,6 +196,7 @@ Route::prefix('admin/inovasi')
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');
         Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
         Route::get('/edit/{id}', 'edit')->name('edit');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/delete/{id}', 'delete')->name('delete');

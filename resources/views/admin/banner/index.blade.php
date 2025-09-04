@@ -64,7 +64,8 @@
                   <img src="{{ asset('storage/'.$row->foto) }}" alt="banner" style="height:45px">
                   @endif
                </td>
-               <td class="text-center" width="15%">
+               <td class="text-center" width="20%">
+                  <a href="/admin/banner/detail/{{$row->id}}" class="btn btn-info btn-xs"><i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="Detail"></i></a>
                   <a href="/admin/banner/edit/{{$row->id}}"><button class="btn btn-success btn-xs"><i class="fa fa-edit" data-toggle="tooltip" data-placement="top" title="Edit Data"></i></button></a>
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#data-{{$row->id}}"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="Delete Data"></i></button>
                </td>

@@ -45,6 +45,15 @@ class VisiMisiController extends Controller
         return view('admin.visi_misi.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('visi_misi')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/visi_misi')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.visi_misi.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

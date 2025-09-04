@@ -27,7 +27,8 @@
             <tr>
                <td class="text-center">{{$no++}}</td>
                <td>@if($row->foto)<img src="{{ asset('storage/'.$row->foto) }}" style="height:60px">@endif</td>
-               <td class="text-center" width="15%">
+               <td class="text-center" width="20%">
+                  <a href="/admin/struktur/detail/{{$row->id}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
                   <a href="/admin/struktur/edit/{{$row->id}}" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a>
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#data-{{$row->id}}"><i class="fa fa-trash"></i></button>
                </td>

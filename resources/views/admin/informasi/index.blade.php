@@ -60,7 +60,8 @@
                <td class="text-center">{{$no++}}</td>
                <td>{!! Str::limit($row->keterangan, 120) !!}</td>
                <td>@if($row->foto)<img src="{{ asset('storage/'.$row->foto) }}" style="height:45px">@endif</td>
-               <td class="text-center" width="15%">
+               <td class="text-center" width="20%">
+                  <a href="/admin/informasi/detail/{{$row->id}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
                   <a href="/admin/informasi/edit/{{$row->id}}"><button class="btn btn-success btn-xs"><i class="fa fa-edit"></i></button></a>
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#data-{{$row->id}}"><i class="fa fa-trash"></i></button>
                </td>

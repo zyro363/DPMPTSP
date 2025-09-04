@@ -53,6 +53,15 @@ class InovasiController extends Controller
         return view('admin.inovasi.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('inovasi')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/inovasi')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.inovasi.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

@@ -51,6 +51,15 @@ class BannerController extends Controller
         return view('admin.banner.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('banner')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/banner')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.banner.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

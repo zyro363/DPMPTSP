@@ -57,6 +57,15 @@ class PegawaiController extends Controller
         return view('admin.pegawai.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('pegawai')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/pegawai')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.pegawai.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

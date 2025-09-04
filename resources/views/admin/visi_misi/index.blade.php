@@ -29,7 +29,8 @@
                <td class="text-center">{{$no++}}</td>
                <td>{!! Str::limit($row->visi, 120) !!}</td>
                <td>{!! Str::limit($row->misi, 120) !!}</td>
-               <td class="text-center" width="15%">
+               <td class="text-center" width="20%">
+                  <a href="/admin/visi_misi/detail/{{$row->id}}" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
                   <a href="/admin/visi_misi/edit/{{$row->id}}" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a>
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#data-{{$row->id}}"><i class="fa fa-trash"></i></button>
                </td>

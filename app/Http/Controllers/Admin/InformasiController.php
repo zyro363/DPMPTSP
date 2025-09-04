@@ -51,6 +51,15 @@ class InformasiController extends Controller
         return view('admin.informasi.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('informasi')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/informasi')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.informasi.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

@@ -53,6 +53,15 @@ class LayananController extends Controller
         return view('admin.layanan.edit', ['item' => $item]);
     }
 
+    public function detail($id)
+    {
+        $item = DB::table('layanan')->where('id', $id)->first();
+        if (!$item) {
+            return redirect('/admin/layanan')->with('error', 'Data tidak ditemukan !');
+        }
+        return view('admin.layanan.detail', ['item' => $item]);
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

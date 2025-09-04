@@ -22,6 +22,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('jam_operasional');
     }
-};
+};  
 
 
