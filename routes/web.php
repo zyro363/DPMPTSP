@@ -15,7 +15,8 @@ use App\Http\Controllers\Admin\StrukturOrganisasiController;
 use App\Http\Controllers\Admin\JamOperasionalController;
 use App\Http\Controllers\Admin\LayananController;
 use App\Http\Controllers\Admin\InovasiController;
-
+use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\PengumumanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -192,6 +193,36 @@ Route::prefix('admin/inovasi')
     ->name('admin.inovasi.')
     ->middleware('cekLevel:1 2')
     ->controller(InovasiController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Berita
+Route::prefix('admin/berita')
+    ->name('admin.berita.')
+    ->middleware('cekLevel:1 2')
+    ->controller(BeritaController::class)
+    ->group(function () {
+        Route::get('/', 'read')->name('read');
+        Route::get('/add', 'add')->name('add');
+        Route::post('/create', 'create')->name('create');
+        Route::get('/detail/{id}', 'detail')->name('detail');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/delete/{id}', 'delete')->name('delete');
+    });
+
+// Pengumuman
+Route::prefix('admin/pengumuman')
+    ->name('admin.pengumuman.')
+    ->middleware('cekLevel:1 2')
+    ->controller(pengumumanController::class)
     ->group(function () {
         Route::get('/', 'read')->name('read');
         Route::get('/add', 'add')->name('add');

@@ -405,6 +405,16 @@
 								<span class="micon bi-lightbulb"></span><span class="mtext">Data Inovasi</span>
 							</a>
 						</li>
+						<li>
+							<a href="/admin/berita" class="dropdown-toggle no-arrow @if ($activePage == 'berita') active @endif">
+								<span class="micon bi-newspaper"></span><span class="mtext">Berita</span>
+							</a>
+						</li>
+						<li>
+							<a href="/admin/pengumuman" class="dropdown-toggle no-arrow @if ($activePage == 'pengumuman') active @endif">
+								<span class="micon bi-megaphone"></span><span class="mtext">Pengumuman</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
