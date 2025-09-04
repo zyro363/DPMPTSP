@@ -46,9 +46,9 @@
             <tr>
                <td class="text-center">{{$no++}}</td>
                <td>{{$row->hari}}</td>
-               <td>{{$row->mulai}}</td>
-               <td>{{$row->selesai}}</td>
-               <td>{{$row->status ? 'Aktif' : 'Nonaktif'}}</td>
+               <td>{{$row->mulai ? $row->mulai : '-'}}</td>
+               <td>{{$row->selesai ? $row->selesai : '-'}}</td>
+               <td>{{$row->status ? 'Buka' : 'Tutup'}}</td>
                <td class="text-center" width="15%">
                   <a href="/admin/jam_operasional/edit/{{$row->id}}" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a>
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#data-{{$row->id}}"><i class="fa fa-trash"></i></button>

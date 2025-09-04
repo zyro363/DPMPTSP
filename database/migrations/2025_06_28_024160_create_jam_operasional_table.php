@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('jam_operasional', function (Blueprint $table) {
             $table->id();
             $table->string('hari');
-            $table->time('mulai');
-            $table->time('selesai');
+            $table->time('mulai')->nullable();
+            $table->time('selesai')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
